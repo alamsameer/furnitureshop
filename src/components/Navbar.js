@@ -7,8 +7,8 @@ import AuthState from "./context/AuthState";
 function ShowtoLoginSignup() {
     return (
         <>
-            <Link to="/login" className="hover:bg-orange-700  hover:text-white px-3 py-2 md:px-4 md:py-3 lg:text-lg text-sm font-medium">Login</Link>
-            <Link to="/signup" className="hover:bg-orange-700  hover:text-white px-3 py-2 md:px-4 md:py-3 lg:text-lg text-sm font-medium">signUp</Link>
+            <Link to="/login" className="hover:text-orange-700   px-3 py-2 md:px-4 md:py-3 md:text-base text-sm font-medium">Login</Link>
+            <Link to="/signup" className="hover:text-orange-700   px-3 py-2 md:px-4 md:py-3 md:text-base text-sm font-medium">signUp</Link>
 
         </>)
 }
@@ -35,7 +35,7 @@ function Nav() {
     console.log(user);
     return (
         <div>
-            <nav className="  mx-4 py-2">
+            <nav className=" py-2 mx-4 ">
                 <div className=" mx-auto  ">
                     <div className="flex items-center justify-between h-16 ">
                         <div className="flex items-center ">
@@ -51,28 +51,28 @@ function Nav() {
 
                                     <Link
                                         to="/"
-                                        className="  hover:text-orange-700  px-3 py-2 text-sm  md:px-4 md:py-3  font-medium"
+                                        className="  hover:text-orange-500  px-3 py-2 text-sm  md:px-4 md:py-3 md:text-base font-medium"
                                     >
                                         Home
                                     </Link>
 
                                     <Link
                                         to="/shop"
-                                        className="  hover:text-orange-700  px-3 py-2 text-sm  md:px-4 md:py-3   font-medium"
+                                        className="  hover:text-orange-500  px-3 py-2 text-sm  md:px-4 md:py-3 md:text-base  font-medium"
                                     >
                                         Shop
                                     </Link>
 
                                     <Link
                                         to="/contact"
-                                        className="  hover:text-orange-700   px-3 py-2 text-sm md:px-4 md:py-3    font-medium"
+                                        className="  hover:text-orange-500   px-3 py-2 text-sm md:px-4 md:py-3  md:text-base  font-medium"
                                     >
                                         Contact
                                     </Link>
 
                                     <Link
                                         to="/aboutus"
-                                        className=" hover:text-orange-700  px-3 py-2 text-sm md:px-4 md:py-3   font-medium"
+                                        className=" hover:text-orange-500  px-3 py-2 text-sm md:text-base md:px-4 md:py-3   font-medium"
                                     >
                                         About us
                                     </Link>
@@ -84,7 +84,7 @@ function Nav() {
                                 {
                                     user ? <LogedinUser user={user} /> : <ShowtoLoginSignup />
                                 }
-                                <Link to="/cart" className="hover:text-orange-700 mt-1 px-3 py-2 text-sm  md:px-4 md:py-3  font-medium">Basket</Link>
+                                <Link to="/cart" className="hover:text-orange-700 md:mt-1 px-3 py-2 text-sm md:text-base md:px-4 md:py-2 font-medium">Basket</Link>
                             </div>
                             <div className="-mr-2 flex md:hidden">
                                 <button
