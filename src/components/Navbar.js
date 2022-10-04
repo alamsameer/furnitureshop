@@ -12,12 +12,20 @@ function ShowtoLoginSignup() {
 
         </>)
 }
-function LogedinUser({user}) {
+function LogedinUser({ user }) {
     console.log(user);
     return (
         <>
-        <h3 className="text-orange-600 px-3 py-2 text-md md:px-4 md:py-3 lg:text-lg font-medium">{user.displayName}</h3>
-            <button onClick={authfn.logout} className="">logout </button>
+            <div className="flex rounded px-2 bg-orange-500 text-white">
+                <img
+                    src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                    class="rounded-full w-8 h-8 mt-1 md:mt-2 mx-2 "
+                    alt="Avatar"
+                />
+                <h3 className="hover:text-orange-600  py-2 text-md  md:py-3  font-semibold  ">{user.displayName}</h3>
+
+            </div>
+            <button onClick={authfn.logout} className="hover:text-orange-600  px-3 py-2 text-sm  md:px-4 md:py-3  font-medium">logout </button>
         </>
     )
 }
@@ -33,38 +41,38 @@ function Nav() {
                         <div className="flex items-center ">
                             <div className="flex-shrink-0 pr-2 md:py-2 border-r-2  border-black">
                                 <img
-                                    className="h-8 lg:h-10 w-24"
+                                    className="h-8 w-24"
                                     src="https://demo.phlox.pro/shop-furniture-2/wp-content/uploads/sites/258/2020/11/cropped-Group-7843.png"
                                     alt="Workflow"
                                 />
                             </div>
                             <div className="hidden md:block ">
-                                <div className=" flex items-baseline space-x-4 ">
+                                <div className=" flex items-baseline space-x-4 mx-4">
 
                                     <Link
                                         to="/"
-                                        className="  hover:bg-orange-700 hover:text-white px-3 py-2 text-sm  md:px-4 md:py-3 lg:text-lg  font-medium"
+                                        className="  hover:text-orange-700  px-3 py-2 text-sm  md:px-4 md:py-3  font-medium"
                                     >
                                         Home
                                     </Link>
 
                                     <Link
                                         to="/shop"
-                                        className="  hover:bg-orange-700 hover:text-white px-3 py-2 text-sm  md:px-4 md:py-3 lg:text-lg  font-medium"
+                                        className="  hover:text-orange-700  px-3 py-2 text-sm  md:px-4 md:py-3   font-medium"
                                     >
                                         Shop
                                     </Link>
 
                                     <Link
                                         to="/contact"
-                                        className="  hover:bg-orange-700 hover:text-white px-3 py-2 text-sm md:px-4 md:py-3 lg:text-lg   font-medium"
+                                        className="  hover:text-orange-700   px-3 py-2 text-sm md:px-4 md:py-3    font-medium"
                                     >
                                         Contact
                                     </Link>
 
                                     <Link
                                         to="/aboutus"
-                                        className=" hover:bg-orange-700 hover:text-white px-3 py-2 text-sm md:px-4 md:py-3 lg:text-lg  font-medium"
+                                        className=" hover:text-orange-700  px-3 py-2 text-sm md:px-4 md:py-3   font-medium"
                                     >
                                         About us
                                     </Link>
@@ -74,9 +82,9 @@ function Nav() {
                         <div className="flex gap-16 justify-center place-items-center">
                             <div className="flex gap-4">
                                 {
-                                    user ? <LogedinUser user={user}/> : <ShowtoLoginSignup/>
+                                    user ? <LogedinUser user={user} /> : <ShowtoLoginSignup />
                                 }
-                                <Link to="/cart" className="hover:bg-orange-700 hover:text-white px-3 py-2 text-sm md:px-4 md:py-3 lg:text-lg font-medium">Basket</Link>
+                                <Link to="/cart" className="hover:text-orange-700 mt-1 px-3 py-2 text-sm  md:px-4 md:py-3  font-medium">Basket</Link>
                             </div>
                             <div className="-mr-2 flex md:hidden">
                                 <button
