@@ -8,4 +8,5 @@ In computing, memoization or memoisation is an optimization technique used prima
 - npm install firebase 
 - copy all inatialize code from the firebase 
 
-## 
+##  live website 
+[firefurniture web app](https://furnitureshop-ten.vercel.app/)
